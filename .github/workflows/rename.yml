@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: git clone https://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@github.com/cicd-cs/myrepo.git
-    - run: pwd
+    - run: |
+        pwd
+        ls  
     - run: git mv mayrepo-new ${GITHUB_REPOSITORY##*/}
     - run: git commit -a -m "Renoemado diretório com sucesso"
     - run: git push
