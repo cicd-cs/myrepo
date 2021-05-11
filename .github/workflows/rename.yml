@@ -1,0 +1,12 @@
+# This is a basic workflow that is manually triggered
+
+name: Rename repository
+on:
+  push:
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git mv myrepo-new ${GITHUB_REPOSITORY##*/}
+      - uses: EndBug/add-and-commit@v5.1.0
