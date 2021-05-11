@@ -6,15 +6,11 @@ jobs:
     name: Rename repository
     runs-on: ubuntu-latest
     steps:
-    - run: git clone https://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@github.com/cicd-cs/myrepo.git
+    - uses: actions/checkout@v2
     - run: |
         git config --global user.email "cicd-cs@cscloud.biz"
         git config --global user.name "ccicd-cs"
-        cd ..
-        pwd
-        ls -la
-    - uses: actions/checkout@v2
-    - run: git mv mayrepo-new ${GITHUB_REPOSITORY##*/}
-    - run: git commit -a -m "Renoemado diretório com sucesso"
-    - run: git push
+        git mv myrepo-new ${GITHUB_REPOSITORY##*/}
+        git commit -a -m "Renoemado diretório com sucesso"
+        git push
     - uses: EndBug/add-and-commit@v5.1.0
