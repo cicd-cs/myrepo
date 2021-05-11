@@ -12,5 +12,5 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v2
-    - run: git mv myrepo_new ${GITHUB_REPOSITORY##*/}
+    - run: git mv myrepo-new ${GITHUB_REPOSITORY##*/}
     - uses: EndBug/add-and-commit@v5.1.0
