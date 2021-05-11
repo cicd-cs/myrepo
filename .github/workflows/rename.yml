@@ -8,6 +8,8 @@ jobs:
     steps:
     - run: git clone https://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@github.com/cicd-cs/myrepo.git
     - run: |
+        git config --global user.email "cicd-cs@cscloud.biz"
+        git config --global user.name "ccicd-cs"
         cd ..
         pwd
         ls -la
