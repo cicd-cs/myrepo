@@ -9,7 +9,9 @@ jobs:
     - run: git clone https://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@github.com/cicd-cs/myrepo.git
     - run: |
         pwd
-        ls  
+        ls
+        cd myrepo
+        ls
     - run: git mv mayrepo-new ${GITHUB_REPOSITORY##*/}
     - run: git commit -a -m "Renoemado diretório com sucesso"
     - run: git push
