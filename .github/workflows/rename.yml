@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - run: git clone git@github.com:cicd-cs/myrepo.git
+    - run: cd myrepo
     - run: git mv myrepo-new ${GITHUB_REPOSITORY##*/}
+    - run: git commit -a -m "Renoemado diretório com sucesso"
+    - run: git push
       shell: bash
     - uses: EndBug/add-and-commit@v5.1.0
