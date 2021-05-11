@@ -13,4 +13,4 @@ jobs:
     #- run: git mv mayrepo-new ${GITHUB_REPOSITORY##*/}
     #- run: git commit -a -m "Renoemado diretório com sucesso"
     #- run: git push
-    - uses: EndBug/add-and-commit@v5.1.0
+    #- uses: EndBug/add-and-commit@v5.1.0
